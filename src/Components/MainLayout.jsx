@@ -8,11 +8,16 @@ const MainLayout = ({ children }) => {
     return (
         <Layout style={{ minHeight: "362px" }}>
             <Header style={{backgroundColor: "#fff"}}>
-                <Menu mode="horizontal" defaultSelectedKeys={["1"]}>
-                    <Menu.Item key="1">
-                        <Link to="/">Список элементов</Link>
-                    </Menu.Item>
-                </Menu>
+                <Menu
+                    mode="horizontal"
+                    defaultSelectedKeys={["1"]}
+                    items={[
+                        {
+                            key: "1",
+                            label: <Link to="/">Список элементов</Link>,
+                        },
+                    ]}
+                />
             </Header>
             <Content style={{ padding: "20px" }}>{children}</Content>
         </Layout>

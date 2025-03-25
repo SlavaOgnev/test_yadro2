@@ -3,13 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import {FormProvider, useForm} from "react-hook-form";
 import { Card, Button, Form, Modal } from "antd";
 import { CardContentContext } from "../ListPage/ListPage";
-import {ControlledInput} from "./ui/ControlledInput";
 import {createDeafaultValue} from "./helpers/createDeafaultValue";
+import {ControlledInput} from "../../Components";
 
 export const EditPage = () => {
     const cardContent = useContext(CardContentContext);
     const { id } = useParams();
-    console.log(id)
     const navigate = useNavigate();
     const [modalVisible, setModalVisible] = useState(true);
     const { handleSubmit, control } = useForm(

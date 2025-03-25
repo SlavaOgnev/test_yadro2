@@ -2,7 +2,8 @@ import React, {createContext, useEffect, useState} from "react";
 import { List, Pagination } from "antd";
 import { fetchPosts } from "./api/getPost";
 import {ListItem} from "./ui/ListItem";
-import {CustomSpin} from "../../Shared/ui/CustomSpin/CustomSpin";
+import {CustomSpin} from "../../Components";
+
 
 
 export const CardContentContext = createContext(null)

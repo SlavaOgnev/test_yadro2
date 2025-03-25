@@ -1,6 +1,5 @@
 export const createDeafaultValue = (cardContent, id) =>{
     const storedUser = JSON.parse(localStorage.getItem(`user_${id}`));
-    console.log(cardContent, id);
     if (storedUser) {
         return (
             {

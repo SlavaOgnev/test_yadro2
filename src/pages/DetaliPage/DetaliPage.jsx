@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import {useParams, Link, Outlet} from "react-router-dom";
 import {Card, Button, Typography} from "antd";
 import {CardContentContext} from '../ListPage/ListPage'
-import {CustomSpin} from "../../Shared/ui/CustomSpin/CustomSpin";
+
 import {getStoredUser} from "../../Shared/functions/useGetStoredUser";
+import {CustomSpin} from "../../Components";
 
 
 const { Title, Paragraph } = Typography;
@@ -23,6 +24,9 @@ export const DetailPage = () => {
     return (
         <Card title={storedUser.name || user.name} style={{ maxWidth: 600, margin: "auto" }}>
             <Title level={4}>{storedUser.email || user.email}</Title>
+            <Paragraph>
+                <b>Никнейм:</b> {storedUser?.username  || user?.username}
+            </Paragraph>
             <Paragraph>
                 <b>Телефон:</b> {storedUser?.phone || user?.phone}
             </Paragraph>
